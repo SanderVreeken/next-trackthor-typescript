@@ -1,0 +1,53 @@
+$background-color-sides: rgba(242, 245, 249, 1);
+
+.calendar {
+  position: relative;
+}
+
+.calendar__day {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.6rem;
+
+  span {
+    align-items: center;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.4rem;
+    min-height: 37px;
+    min-width: 37px;
+    padding: 0.6rem;
+  }
+}
+
+.calendar__days,
+.calendar__months {
+  display: flex;
+  justify-content: space-between;
+
+  h3,
+  span {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+.calendar__wrapper {
+  background: linear-gradient(
+    to right,
+    $background-color-sides 0%,
+    rgba(255, 255, 255, 0) 18%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0) 82%,
+    $background-color-sides 100%
+  );
+  bottom: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}

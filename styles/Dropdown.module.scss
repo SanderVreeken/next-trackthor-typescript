@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+.dropdown {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+
+  p {
+    font-size: 0.67em;
+  }
+}
+
+.dropdown__main {
+  align-items: center;
+  display: flex;
+
+  > span {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0.4rem;
+  }
+}
+
+.dropdown__options {
+  border-radius: $main-border-radius;
+  box-shadow: $main-box-shadow;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+
+  > span {
+    background-color: white;
+    border-radius: $main-border-radius;
+    display: flex;
+    padding: 0.7rem 1rem;
+    text-align: right;
+    width: 100%;
+  }
+}

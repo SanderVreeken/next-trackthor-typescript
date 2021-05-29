@@ -1,0 +1,26 @@
+.dashboard {
+  height: 100%;
+  padding: 1.4rem 2.4rem;
+  width: 100%;
+
+  div[role="agenda"] {
+    margin-top: 2rem;
+  }
+
+  header {
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.dashboard__cards {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  margin: 2rem 0;
+}

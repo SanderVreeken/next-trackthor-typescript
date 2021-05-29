@@ -1,0 +1,77 @@
+@use 'variables' as *;
+
+@mixin background-color($color, $n) {
+  &:nth-child(#{$n}) {
+    .card__items {
+      > span {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: $main-border-radius;
+  box-shadow: $main-box-shadow;
+  padding: 0.8rem;
+
+  @include background-color(#e8f8fb, 1);
+  @include background-color(#f1f8f2, 2);
+  @include background-color(#f1edfc, 3);
+}
+
+.card__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 24px;
+}
+
+.card__item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+
+  &:first-child {
+    border-radius: $main-border-radius $main-border-radius 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 $main-border-radius $main-border-radius;
+  }
+
+  h6 {
+    font-weight: 500;
+  }
+
+  span {
+    align-items: center;
+    display: flex;
+
+    span {
+      background-color: white;
+      border-radius: $main-border-radius;
+      justify-content: center;
+      margin-right: 0.6rem;
+      padding: 0.2rem;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid $main-border-color;
+      display: flex;
+      justify-content: center;
+      min-width: 68px;
+      padding: 0 0.8rem;
+    }
+  }
+}
+
+.card__items {
+  gap: 0.4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 0.6rem;
+}

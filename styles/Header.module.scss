@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+.header {
+  button {
+    align-items: center;
+    background-color: white;
+    border: 0;
+    border-radius: $main-border-radius;
+    box-shadow: $main-box-shadow;
+    display: flex;
+    height: $header-button-height;
+    justify-content: center;
+    width: $header-button-height;
+  }
+
+  > span {
+    display: flex;
+
+    button:nth-child(2) {
+      background-color: #e3e9f4;
+      box-shadow: none;
+      margin: 0 0.5rem;
+    }
+  }
+}

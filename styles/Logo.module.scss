@@ -1,0 +1,21 @@
+.logo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    letter-spacing: 0.2rem;
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+
+  span {
+    display: flex;
+  }
+
+  svg {
+    height: 3em;
+    width: 3em;
+  }
+}
