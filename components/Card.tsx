@@ -6,6 +6,7 @@ interface Props {
     card: CardI
 }
 
+// Item component that is rendered to display the items in the card.
 const Item = (icon: JSX.Element, item: { meta: string, title?: string }) => (
     <span className={styles.card__item}>
         <span>
